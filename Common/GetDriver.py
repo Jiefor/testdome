@@ -5,7 +5,10 @@ from time import sleep
 
 @singleton
 class GetDriver(object):
-    def __int__(self):
+    def __init__(self):
+        # a=1
+        # b=2
+        # print(a+b)
     # 定义空字典，并加入设备信息
         desired_caps = {}
         desired_caps['platformName'] = Setting.PlatformName

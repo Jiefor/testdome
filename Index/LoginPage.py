@@ -28,7 +28,7 @@ class LoginPage(object):
         return self.psd
 
     # 定义定位登录按钮的方法
-    def Login(self):
+    def LoginBtn(self):
     # 尝试页面定位该元素，如果失败则弹出相关提示信息
         try:
             self.login = self.dr.find_element_by_id('com.meilin.wulianbaogj:id/login_mian_btn')

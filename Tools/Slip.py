@@ -11,7 +11,7 @@ class Slip(object):
         self.y=self.dr.get_window_size()['height']
 
     #定义向上滑动的方法
-    def UP(self):
+    def UpSlip(self):
         self.slipup=self.dr.swipe(self.x*0,self.y*9,self.x*0,self.y*1,1000)
         return self.slipup
     

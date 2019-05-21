@@ -4,9 +4,9 @@
 #NOTICE:页面层，只定位不操作
 #调取驱动
 from Common.GetDriver import GetDriver
-from Tools.Slip import UP
+from Tools.Slip import Slip
 #定义一个类【类名与方法名一致，方便以后调用】
-class LoginPage(object):
+class HomePage(object):
     #将GetDriver()的方法拿过来用
     def __init__(self):
         self.dr=GetDriver().dr#注意加GetDriver()用的是方法，而不是GetDriver类
@@ -16,5 +16,21 @@ class LoginPage(object):
         try:
             self.baos= self.dr.find_element_by_id('com.meilin.wulianbaogj:id/et_login_password')
         except:
-            UP()
+            Slip().UpSlip()
         return self.baos
+    #定义巡检方法
+    def Xunjian(self):
+        pass
+    #定义巡查方法
+    def Xuncha(self):
+        pass
+    #定义紧急任务方法
+    def Jinj(self):
+        pass
+    #定位“我的”页入口
+    def EnterMyPage(self):
+        try:
+            self.entermypage=self.dr.find_element_by_id('com.meilin.wulianbaogj:id/main_tv4')
+        except Exception as error:
+            assert False,'未找到\'我的\'按钮'
+        return self.entermypage

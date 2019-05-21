@@ -1,7 +1,7 @@
 #调取驱动
 from Common.GetDriver import GetDriver
 #定义一个类【类名与方法名一致，方便以后调用】
-class LoginPage(object):
+class MyPage(object):
     #将GetDriver()的方法拿过来用
     def __init__(self):
         self.dr=GetDriver().dr#注意加GetDriver()用的是方法，而不是GetDriver类

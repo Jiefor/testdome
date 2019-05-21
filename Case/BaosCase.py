@@ -2,6 +2,11 @@
 import unittest
 from Common.GetDriver import GetDriver
 from Index.LoginPage import LoginPage
+from Index.HomePage import HomePage
+from Index.MyPage import MyPage
+from Index.SettingPage import SettingPage
+from Index.BaosPage import BaosPage
+from Tools.Zuobiao import Zuobiao
 from time import sleep
 #死规定，必须这么写
 #定义一个case类，集成unittest中case的属性
@@ -20,12 +25,22 @@ class TestCase(unittest.TestCase):
         sleep(1)
         LoginPage().Password().send_keys("a12345678")
         sleep(1)
-        LoginPage().Login().click()
+        LoginPage().LoginBtn().click()
         sleep(2)
     def tearDown(self):#每条case后执行
-        pass
+        HomePage().EnterMyPage().click()
+        MyPage().Setting().click()
+        SettingPage().Logout().click()
+        #弹框同意
+        self.dr.switch_to_alert().accept()
     def test_case001(self):
-        pass
+        HomePage().BaoS().click()
+        sleep(1)
+        BaosPage().Content().send_keys('test')
+
+
+
+
 
 
 
