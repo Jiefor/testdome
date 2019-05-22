@@ -11,7 +11,7 @@ class BaosPage(object):
     #将GetDriver()的方法拿过来用
     def __init__(self):
         self.dr=GetDriver().dr#注意加GetDriver()用的是方法，而不是GetDriver类
-        self.dr.hide_keyboard()  # 隐藏键盘
+        #self.dr.hide_keyboard()  # 隐藏键盘
 
 
     #定位报事内容方法

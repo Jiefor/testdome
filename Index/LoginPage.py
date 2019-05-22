@@ -31,7 +31,7 @@ class LoginPage(object):
     def LoginBtn(self):
     # 尝试页面定位该元素，如果失败则弹出相关提示信息
         try:
-            self.login = self.dr.find_element_by_id('com.meilin.wulianbaogj:id/login_mian_btn')
+            self.loginbtn = self.dr.find_element_by_id('com.meilin.wulianbaogj:id/login_mian_btn')
         except Exception as error:
             assert False, '未找到元素：登录按钮'
-        return self.login
+        return self.loginbtn

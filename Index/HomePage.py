@@ -14,9 +14,9 @@ class HomePage(object):
     def BaoS(self):
     # 尝试页面定位该元素，如果失败则向上滑动屏幕
         try:
-            self.baos= self.dr.find_element_by_id('com.meilin.wulianbaogj:id/et_login_password')
+            self.baos= self.dr.find_element_by_id('com.meilin.wulianbaogj:id/rl_baoshi')
         except:
-            Slip().UpSlip()
+            Slip().UpSwipe()
         return self.baos
     #定义巡检方法
     def Xunjian(self):
@@ -29,8 +29,9 @@ class HomePage(object):
         pass
     #定位“我的”页入口
     def EnterMyPage(self):
-        try:
-            self.entermypage=self.dr.find_element_by_id('com.meilin.wulianbaogj:id/main_tv4')
-        except Exception as error:
-            assert False,'未找到\'我的\'按钮'
-        return self.entermypage
+        self.dr.find_element_by_id('com.meilin.wulianbaogj:id/mian_lil4')
+        # try:
+        #     self.entermypage=self.dr.find_element_by_id('com.meilin.wulianbaogj:id/mian_lil4')
+        # except Exception as error:
+        #     assert False,'未找到\'我的\'按钮'
+        # return self.entermypage

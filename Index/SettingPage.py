@@ -4,6 +4,7 @@ class SettingPage(object):
     #将GetDriver()的方法拿过来用
     def __init__(self):
         self.dr=GetDriver().dr#注意加GetDriver()用的是方法，而不是GetDriver类
+
     #定位“退出登录”
     def Logout(self):
         try:
